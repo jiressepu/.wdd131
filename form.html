@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/form.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form id="reviewForm" method="get" action="review.html">
+            <label for="product">Product Name:</label>
+            <select id="product" name="product" required>
+                <option disabled selected value="">Select a product...</option>
+            </select>
+
+            <label>Overall Rating:</label>
+            <div class="rating">
+                <div class="stars">
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5">☆☆☆☆☆</label>
+                    <input type="checkbox" id="checkbox5" name="checkbox5" onclick="selectStar(5)">
+                </div>
+                
+                <div class="stars">
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">☆☆☆☆</label>
+                    <input type="checkbox" id="checkbox4" name="checkbox4" onclick="selectStar(4)">
+                </div>
+                
+                <div class="stars">
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">☆☆☆</label>
+                    <input type="checkbox" id="checkbox3" name="checkbox3" onclick="selectStar(3)">
+                </div>
+                
+                <div class="stars">
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">☆☆</label>
+                    <input type="checkbox" id="checkbox2" name="checkbox2" onclick="selectStar(2)">
+                </div>
+                
+                <div class="stars">
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">☆</label>
+                    <input type="checkbox" id="checkbox1" name="checkbox1" onclick="selectStar(1)">
+                </div>
+            </div>
+
+            <label for="installDate">Installation Date:</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+            <label>Useful Features:</label>
+            <div class="features">
+                <input type="checkbox" id="feature1" name="features" value="debugging-tools">
+                <label for="feature1">Debugging Tools</label>
+                <input type="checkbox" id="feature2" name="features" value="code-completion">
+                <label for="feature2">Code Completion</label>
+                <input type="checkbox" id="feature3" name="features" value="version-control">
+                <label for="feature3">Version Control</label>
+                <input type="checkbox" id="feature4" name="features" value="integrated-terminal">
+                <label for="feature4">Integrated Terminal</label>
+            </div>
+
+            <label for="review">Written Review:</label>
+            <textarea id="review" name="review"></textarea>
+
+            <label for="username">Username (optional):</label>
+            <input type="text" id="username" name="username">
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 - All rights reserved</p>
+    </footer>
+</body>
+</html>
