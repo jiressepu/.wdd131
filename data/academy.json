@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Modern Web Development",
+    "description": "Learn HTML, CSS, JavaScript, and more.",
+    "figcaptionDescription": "A complete guide to getting started in web development.",
+    "image": "images/imgc.jpg",
+    "link": "detail.html"
+  },
+  {
+    "id": 2,
+    "title": "Advanced JavaScript",
+    "description": "Master advanced JavaScript concepts.",
+    "figcaptionDescription": "Deepen your knowledge of JavaScript.",
+    "image": "images/java.png",
+    "link": "detail.html"
+  },
+  {
+    "id": 3,
+    "title": "Mastering CSS",
+    "description": "Learn web design with CSS and modern frameworks.",
+    "figcaptionDescription": "Improve the appearance of your websites with CSS.",
+    "image": "images/css.png",
+    "link": "detail.html"
+  },
+  {
+    "id": 4,
+    "title": "JSON and APIs",
+    "description": "Understand how to structure and manipulate JSON data.",
+    "figcaptionDescription": "Effectively handle data using JSON and APIs.",
+    "image": "images/imgc2.jpg",
+    "link": "detail.html"
+  },
+  {
+    "id": 5,
+    "title": "HTML Fundamentals",
+    "description": "The basics of HTML for creating structured web pages.",
+    "figcaptionDescription": "Learn how to structure your web pages with HTML.",
+    "image": "images/html.png",
+    "link": "detail.html"
+  },
+  {
+    "id": 6,
+    "title": "Python for Beginners",
+    "description": "Discover programming with Python, a versatile language.",
+    "figcaptionDescription": "Learn Python, a powerful and easy-to-use language.",
+    "image": "images/python.png",
+    "link": "detail.html"
+  },
+  {
+    "id": 7,
+    "title": "MySQL and Databases",
+    "description": "Learn to manage and query MySQL databases.",
+    "figcaptionDescription": "Master MySQL to handle databases efficiently.",
+    "image": "images/sql.png",
+    "link": "detail.html"
+  },
+  {
+    "id": 8,
+    "title": "Digital Marketing",
+    "description": "Essential strategies to succeed in online marketing.",
+    "figcaptionDescription": "Develop your skills in digital marketing.",
+    "image": "images/digital.png",
+    "link": "detail.html"
+  }
+]

@@ -1,0 +1,64 @@
+[
+    {
+        "titre": "HTML & CSS",
+        "description": "Learn the basics of web design with HTML & CSS. Start creating responsive and attractive websites right away!"
+    },
+    {
+        "titre": "JavaScript for Beginners",
+        "description": "Dive into JavaScript programming and master interactive web elements."
+    },
+    {
+        "titre": "Advanced Python",
+        "description": "Master Python and its frameworks for web development, automation, and data analysis."
+    },
+    {
+        "titre": "Web Design Principles",
+        "description": "Learn how to design responsive websites that adapt to all devices."
+    },
+    {
+        "titre": "React.js for Beginners",
+        "description": "Start building interactive interfaces with React and learn the basics of modern web development."
+    },
+    {
+        "titre": "Node.js and Express",
+        "description": "Learn backend development with Node.js and build server-side applications using Express."
+    },
+    {
+        "titre": "PHP for Web Development",
+        "description": "Understand PHP and how to use it to build dynamic websites and web applications."
+    },
+    {
+        "titre": "SQL and Databases",
+        "description": "Learn how to interact with databases using SQL and build efficient websites."
+    },
+    {
+        "titre": "Mobile Web Development",
+        "description": "Discover best practices for developing websites optimized for mobile devices."
+    },
+    {
+        "titre": "UI/UX Design Fundamentals",
+        "description": "Learn the basics of user interface and user experience design to create user-friendly websites."
+    },
+    {
+        "titre": "CSS Flexbox and Grid",
+        "description": "Master modern layout techniques like Flexbox and CSS Grid to create advanced designs."
+    },
+    {
+        "titre": "JavaScript for Web Development",
+        "description": "Practice JavaScript and use it to add dynamic features to your websites."
+    },
+    {
+        "titre": "Web Security Basics",
+        "description": "Learn how to secure your web applications and protect against common vulnerabilities."
+    },
+    {
+        "titre": "Git and Version Control",
+        "description": "Discover the basics of Git, version control, and collaboration with GitHub."
+    },
+    {
+        "titre": "Agile Web Development",
+        "description": "Understand Agile principles and how to apply them to modern web development workflows."
+    }
+]
+
+

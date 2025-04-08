@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn web development with CréaWeb Academy. Enroll in our HTML, CSS, JavaScript, Python courses and more.">
+    <meta name="keywords" content="Web Development, HTML, CSS, JavaScript, Python, Training, CréaWeb Academy">
+    <meta property="og:title" content="CréaWeb Academy - Learn Web Development">
+    <meta property="og:description" content="Discover and enroll in our web development training at CréaWeb Academy.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://jiresselusa127.systeme.io/school/course/">
+    <meta name="twitter:title" content="Learn Web Development">
+    <meta name="twitter:description" content="Sign up now and learn how to create professional websites.">
+    <meta name="twitter:image" content="images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>CréaWeb Academy | Frontend Web Development Training</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/academy.css">
+    <script type="module" src="scripts/academy.js"></script>
+    <a href="${module.lien}" target="_blank" class="btn" title="Discover the module ${module.titre}">Discover</a>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SKSXS8XL1"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3SKSXS8XL1');
+</script>
+</head>
+<body>   
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="CréaWeb Academy Logo">
+        </div>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+        <nav id="navMenu">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detail.html">Courses</a>
+                    <ul class="submenu">
+                        <li><a href="Webacademy.html">Web Development</a></li>
+                        <li><a href="detail.html">HTML & CSS</a></li>
+                        <li><a href="detail.html">JavaScript</a></li>
+                        <li><a href="detail.html">Python</a></li>
+                        <li><a href="detail.html">Digital Marketing</a></li>
+                    </ul>
+                </li>
+                <li><a href="history.html">Compare Courses</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="history.html">About</a></li>
+                <li><a href="page_d'information.html" class="cta-signin">Sign Up</a></li>
+                <li class="search-container">
+                    <input type="text" placeholder="Search...">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <video autoplay loop muted class="hero-video">
+                <source src="images/video.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <div class="hero-text">
+                <h1>Master Website Creation</h1>
+                <p>Courses suitable for all levels to help you master modern technologies.</p>
+                <a href="detail.html" class="cta-button">View Courses</a>
+            </div>
+        </section>
+        <section class="advantages">
+            <h2>Why Choose CréaWeb Academy?</h2>
+            <div class="advantage-list">
+                <div class="advantage">
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from industry professionals using proven teaching methods.</p>
+                </div>
+                <div class="advantage">
+                    <h3>100% Online Training</h3>
+                    <p>Access courses from anywhere and progress at your own pace.</p>
+                </div>
+                <div class="advantage">
+                    <h3>Find a Job During the Training</h3>
+                    <p>Gain in-demand skills and start your career right away.</p>
+                </div>
+            </div>
+            <section id="modules">
+                <h2>Our Training Modules</h2>
+                <div id="modules-container">
+                    <!-- Modules will be dynamically displayed here -->
+                </div>
+            </section>
+        </section>
+        <section class="testimonials">
+            <h2>What Our Students Say</h2>
+            <div class="testimonial-list">
+                <div class="testimonial">
+                    <img src="images/black.jpg" alt="Jean Dupont">
+                    <p>“Thanks to CréaWeb Academy, I was able to start my developer career in just a few months!”</p>
+                    <h4>Jean Dupont</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="images/man.jpg" alt="Marie Leblanc">
+                    <p>“The courses are clear and comprehensive, perfect for effective learning.”</p>
+                    <h4>Marie Leblanc</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Additional footer section with logo and 4 rules -->
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Webacademy Logo">
+            </div>
+            <div class="footer-rules">
+                <div class="footer-rule">
+                    <a href="privacy-policy.html" class="cta-button">Privacy Policy</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="terms-of-use.html" class="cta-button">Terms of Use</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="cookie-policy.html" class="cta-button">Cookie Policy</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="about-us.html" class="cta-button">Site Purpose</a>
+                    <p>&copy; 2025 Webacademy - All rights reserved</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live-server injected code -->
+    <script>
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Please update your browser. This browser does NOT support WebSocket for live reloading.');
+        }
+    </script>
+</body>
+</html>

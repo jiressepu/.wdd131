@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CréaWeb Academy - The training that shapes tomorrow's web experts.">
+    <meta name="keywords" content="CréaWeb, Academy, Web Training, Web Development, Digital Marketing, UX/UI">
+    <title>CréaWeb Academy - The Training That Shapes Tomorrow's Web Experts</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="module" src="scripts/main.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SKSXS8XL1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3SKSXS8XL1');
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="CréaWeb Academy Logo">
+        </div>
+        <nav>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="detail.html">Our Courses</a></li>
+                <li><a href="detail.html">Explore</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="history.html">About Us</a></li>
+                <li><a href="page_d'information.html" class="cta-signin">Sign In</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-list');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+    <main>
+        <section class="hero">
+            <img src="images/hiro.jpg" alt="Web Training" class="hero-image">
+            <div class="hero-text">
+                <h1>Welcome to CréaWeb Academy</h1>
+                <p>The training that shapes tomorrow’s web experts.</p>
+                <a href="page_d'information.html" class="cta-button">Sign Up Here</a>
+            </div>
+        </section>
+
+        <section class="history">
+            <div class="history-text">
+                <h2>Our Story</h2>
+                <p>CréaWeb Academy was born out of the passion of industry experts determined to make digital skills accessible to everyone. Founded in <strong>2015</strong>, we’ve been training thousands of students ever since.</p>
+                <p>Over the years, we have helped our learners acquire key skills and launch new careers.</p>
+            </div>
+            <div class="history-icon">
+                <img src="images/history.jpg" alt="Our Story">
+            </div>
+        </section>
+
+        <section class="mission">
+            <div class="mission-text">
+                <h2>Our Mission</h2>
+                <p>Our mission is to provide high-quality training that is accessible and aligned with job market needs.</p>
+                <p>We emphasize hands-on learning to ensure the employability of our students.</p>
+            </div>
+            <div class="mission-icon">
+                <img src="images/mission.jpg" alt="Our Mission">
+            </div>
+        </section>
+
+        <section class="values">
+            <div class="values-text">
+                <h2>Our Values</h2>
+                <ul>
+                    <li><strong>Accessibility:</strong> Open education for all, without barriers.</li>
+                    <li><strong>Practical Learning:</strong> Training focused on real-world projects.</li>
+                    <li><strong>Innovation:</strong> Continuous monitoring for up-to-date training.</li>
+                    <li><strong>Community:</strong> A network of support and sharing.</li>
+                </ul>
+            </div>
+            <div class="values-icon">
+                <img src="images/imgc2.jpg" alt="Our Values">
+            </div>
+        </section>
+
+        <section class="distinction">
+            <div class="distinction-text">
+                <h2>What Sets Us Apart</h2>
+                <ul>
+                    <li>Personalized mentorship and guidance toward employment.</li>
+                    <li>Courses designed with industry experts.</li>
+                    <li>Real-world projects for hands-on experience.</li>
+                </ul>
+            </div>
+            <div class="distinction-icon">
+                <img src="images/distang.jpg" alt="What Sets Us Apart">
+            </div>
+        </section>
+
+        <section class="cta-before-footer">
+            <div class="cta-content">
+                <h2>Ready to Start Your Journey with CréaWeb Academy?</h2>
+                <p>Unlock your potential with training in web development, design, marketing, and more.</p>
+                <a href="signin.html" class="cta-button">Start Learning Today</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="CréaWeb Academy Logo">
+            </div>
+            <div class="footer-rules">
+                <div class="footer-rule">
+                    <a href="privacy-policy.html" class="cta-button">Privacy Policy</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="terms-of-use.html" class="cta-button">Terms of Use</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="cookie-policy.html" class="cta-button">Cookie Policy</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="about-us.html" class="cta-button">Site Usefulness</a>
+                    <p>&copy; 2025 CréaWeb Academy - All rights reserved</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-rules">
+                <div class="footer-rule">
+                    <a href="privacy-policy.html" class="cta-button">Privacy Policy</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="terms-of-use.html" class="cta-button">Terms of Use</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="cookie-policy.html" class="cta-button">Cookie Policy</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="about-us.html" class="cta-button">Site Usefulness</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-rules">
+                <div class="footer-rule">
+                    <a href="privacy-policy.html" class="cta-button">Privacy Policy</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="terms-of-use.html" class="cta-button">Terms of Use</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="cookie-policy.html" class="cta-button">Cookie Policy</a>
+                </div>
+                <div class="footer-rule">
+                    <a href="about-us.html" class="cta-button">Site Usefulness</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

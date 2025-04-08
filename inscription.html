@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - CréaWeb Academy</title>
+    <link rel="stylesheet" href="styles/inscription.css">
+</head>
+<body>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SKSXS8XL1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3SKSXS8XL1');
+</script>
+
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="CréaWeb Academy Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="detail.html">Courses</a></li>
+            <li><a href="history.html">About</a></li>
+            <li><a href="page_d'information.html">Explore</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="inscription">
+        <h1>Register at CréaWeb Academy</h1>
+        <form id="captureForm">
+            <label for="nom">Last Name</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">First Name</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="pays">Country</label>
+            <input type="text" id="pays" name="pays" required>
+
+            <label for="ville">City</label>
+            <input type="text" id="ville" name="ville" required>
+
+            <label for="code_postal">Postal Code</label>
+            <input type="text" id="code_postal" name="code_postal" required>
+
+            <label for="telephone">Phone Number</label>
+            <input type="tel" id="telephone" name="telephone" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <h2>Select Your Courses:</h2>
+            <p>Please click one of the buttons below to display the corresponding courses. Choose "Beginner" if you're just starting out, or "Advanced" if you already have some basics.</p>
+            
+            <div class="cours-list">
+                <button type="button" id="select-debutant">Show Beginner Courses</button>
+                <button type="button" id="select-avance">Show Advanced Courses</button>
+                
+                <div id="cours-debutant" style="display: none;">
+                    <label><input type="checkbox" name="cours" value="html-css-debutant" class="debutant"> HTML & CSS (Beginner)</label>
+                    <label><input type="checkbox" name="cours" value="javascript-debutant" class="debutant"> JavaScript (Beginner)</label>
+                    <label><input type="checkbox" name="cours" value="python-debutant" class="debutant"> Python (Beginner)</label>
+                    <label><input type="checkbox" name="cours" value="mysql-debutant" class="debutant"> MySQL (Beginner)</label>
+                </div>
+                
+                <div id="cours-avance" style="display: none;">
+                    <label><input type="checkbox" name="cours" value="html-css-avance" class="avance"> HTML & CSS (Advanced)</label>
+                    <label><input type="checkbox" name="cours" value="javascript-avance" class="avance"> JavaScript (Advanced)</label>
+                    <label><input type="checkbox" name="cours" value="python-avance" class="avance"> Python (Advanced)</label>
+                    <label><input type="checkbox" name="cours" value="mysql-avance" class="avance"> MySQL (Advanced)</label>
+                </div>
+                
+                <label><input type="checkbox" name="cours" value="marketing-digital"> Digital Marketing</label>
+            </div>
+
+            <script>
+                document.getElementById("select-debutant").addEventListener("click", function() {
+                    let debutantDiv = document.getElementById("cours-debutant");
+                    let checkboxes = debutantDiv.querySelectorAll("input[type='checkbox']");
+                    debutantDiv.style.display = (debutantDiv.style.display === "none" || debutantDiv.style.display === "") ? "block" : "none";
+                    checkboxes.forEach(checkbox => checkbox.checked = true);
+                });
+
+                document.getElementById("select-avance").addEventListener("click", function() {
+                    let avanceDiv = document.getElementById("cours-avance");
+                    let checkboxes = avanceDiv.querySelectorAll("input[type='checkbox']");
+                    avanceDiv.style.display = (avanceDiv.style.display === "none" || avanceDiv.style.display === "") ? "block" : "none";
+                    checkboxes.forEach(checkbox => checkbox.checked = true);
+                });
+            </script>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Firebase v9+ -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDzMpVFXdYEQ_4ch3GthMvF52hIRce9qD8",
+            authDomain: "inscriptionapp-ddb3e.firebaseapp.com",
+            projectId: "inscriptionapp-ddb3e",
+            storageBucket: "inscriptionapp-ddb3e.firebasestorage.app",
+            messagingSenderId: "213159898520",
+            appId: "1:213159898520:web:a986ee20ed1762b4e58fed"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("captureForm").addEventListener("submit", async function(event) {
+                event.preventDefault();
+
+                let nom = document.getElementById("nom").value.trim();
+                let prenom = document.getElementById("prenom").value.trim();
+                let pays = document.getElementById("pays").value.trim();
+                let ville = document.getElementById("ville").value.trim();
+                let code_postal = document.getElementById("code_postal").value.trim();
+                let telephone = document.getElementById("telephone").value.trim();
+                let email = document.getElementById("email").value.trim();
+
+                if (!nom || !prenom || !pays || !ville || !code_postal || !telephone || !email) {
+                    alert("Please fill out all the fields!");
+                    return;
+                }
+
+                let cours = [];
+                document.querySelectorAll('input[name="cours"]:checked').forEach((checkbox) => {
+                    cours.push(checkbox.value);
+                });
+
+                try {
+                    await addDoc(collection(db, "inscriptions"), {
+                        nom,
+                        prenom,
+                        pays,
+                        ville,
+                        code_postal,
+                        telephone,
+                        email,
+                        cours,
+                        timestamp: serverTimestamp()
+                    });
+                    console.log("Data saved!");
+                    window.location.href = "merci.html";
+                } catch (error) {
+                    console.error("Save error:", error);
+                }
+            });
+        });
+    </script>
+</main>
+
+<footer>
+    <p>&copy; 2025 CréaWeb Academy - All rights reserved</p>
+</footer>
+</body>
+</html>
