@@ -2,12 +2,12 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e96d07;
+    background-color: #ebe7e4;
     color: #333;
 }
 
 header {
-    background-color: #f5f1f1;
+    background-color: #f3f1f1;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,7 @@ nav ul li:first-child a {
 main {
     width: 50%;
     margin: 40px auto;
-    background: #fff;
+    background: #f3f1f1;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -65,7 +65,7 @@ main {
     display: block;
     width: 50px;
     height: 3px;
-    background: #f9a826;
+    background: #c9800a;
     margin: 5px auto;
 }
 
