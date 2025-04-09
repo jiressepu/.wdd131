@@ -30,7 +30,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #0a0000;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -151,4 +151,43 @@ footer::before {
     font-size: 14px;
     color: #f9a826;
     margin-bottom: 10px;
+}
+
+
+/* Masque le menu sur mobile */
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajuste selon la hauteur de ton header */
+        right: 0;
+        background-color: rgb(253, 251, 251);
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
 }
