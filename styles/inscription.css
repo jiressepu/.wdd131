@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #f3f1f1;
+    background-color: #da720b;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -45,9 +45,9 @@ nav ul li:first-child a {
 }
 
 main {
-    width: 50%;
+    width: 80%;
     margin: 40px auto;
-    background: #f3f1f1;
+    
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -181,7 +181,7 @@ nav ul {
         position: absolute;
         top: 60px; /* Ajuste selon la hauteur de ton header */
         right: 0;
-       
+        background-color: rgb(253, 251, 251);
         padding: 0.1rem;
         border: 0.1px solid #ccc;
         border-radius: 5px;
