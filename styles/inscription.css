@@ -181,10 +181,10 @@ nav ul {
         position: absolute;
         top: 60px; /* Ajuste selon la hauteur de ton header */
         right: 0;
-        background-color: rgb(253, 251, 251);
-        padding: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 8px;
+       
+        padding: 0.1rem;
+        border: 0.1px solid #ccc;
+        border-radius: 5px;
     }
 
     nav ul.active {
