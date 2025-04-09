@@ -1,50 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - CréaWeb Academy</title>
-    <link rel="stylesheet" href="styles/inscri.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You - CréaWeb Academy</title>
+  <link rel="stylesheet" href="styles/inscri.css" />
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: orange;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    /* Burger button */
+    .menu-toggle {
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* Navigation (mobile version) */
+    nav {
+      position: fixed;
+      top: 0;
+      left: -250px; /* Hide initially */
+      height: 100%;
+      width: 250px;
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 60px 20px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav.active {
+      left: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+    }
+
+    nav ul li {
+      margin: 20px 0;
+      width: 100%;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      width: 100%;
+    }
+
+    /* Desktop mode */
+    @media(min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      nav {
+        position: static;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        left: 0;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li {
+        margin: 0;
+      }
+
+      nav ul li a {
+        color: #333;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SKSXS8XL1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-3SKSXS8XL1');
-    </script>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="CréaWeb Academy Logo" />
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="mobileNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="detail.html">Courses</a></li>
+        <li><a href="detail.html">Explore</a></li>
+        <li><a href="history.html">OurStory</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="CréaWeb Academy Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="detail.html">Courses</a></li>
-                <li><a href="detail.html">Explore</a></li>
-                <li><a href="history.html">Our Story</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main class="thank-you-container">
-        <section class="thank-you">
-            <h1>Thank you for registering!</h1>
-            <p>Your registration at <strong>CréaWeb Academy</strong> has been successfully received.</p>
-            <p>We will send you an email with all the necessary information within 6 hours.</p>
-            <p>In the meantime, feel free to explore our courses and discover our content.</p>
-            <a href="formations.html" class="cta-button">View Courses</a>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 CréaWeb Academy - All rights reserved</p>
-    </footer>
+  <main class="thank-you-container">
+    <section class="thank-you">
+      <h1>Thank you for registering!</h1>
+      <p>Your registration at <strong>CréaWeb Academy</strong> has been successfully received.</p>
+      <p>We will send you an email with all the necessary information within 6 hours.</p>
+      <p>In the meantime, feel free to explore our courses and discover our content.</p>
+      <a href="formations.html" class="cta-button">View Courses</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CréaWeb Academy - All rights reserved</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('active');
+    }
+  </script>
+
 </body>
 </html>
